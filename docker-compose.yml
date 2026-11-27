@@ -1,0 +1,24 @@
+# Local infrastructure for development:  docker compose up -d
+#   MongoDB  -> mongodb://127.0.0.1:27017/speakmate
+#   Redis    -> redis://127.0.0.1:6379      (optional, only needed for multi-instance)
+#   coturn   -> turn:localhost:3478         (optional, for testing relay connections)
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports: ['27017:27017']
+    volumes: ['mongo-data:/data/db']
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports: ['6379:6379']
+
+  coturn:
+    image: coturn/coturn:4.6
+    restart: unless-stopped
+    network_mode: host
+    volumes: ['./deploy/coturn/turnserver.conf:/etc/coturn/turnserver.conf:ro']
+
+volumes:
+  mongo-data:

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#7ED957" />
+    <meta name="description" content="SpeakMate connects English learners through random audio calls. Don't learn English alone." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="SpeakMate" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <title>SpeakMate - Speak English With The World</title>
+    <style>
+      /* Splash shown until React mounts (also what users see right after installing the PWA) */
+      #splash{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:#fff;z-index:9999;transition:opacity .35s}
+      #splash .logo{width:92px;height:92px;border-radius:26px;background:linear-gradient(135deg,#8fe768,#5bc236);display:flex;align-items:center;justify-content:center;gap:5px;box-shadow:0 14px 40px -10px rgba(126,217,87,.8);animation:sp 1.6s ease-in-out infinite}
+      #splash .logo i{display:block;width:7px;border-radius:6px;background:#1b5e20}
+      #splash b{font:800 22px/1 'Plus Jakarta Sans',system-ui,sans-serif;color:#1b5e20;letter-spacing:-.02em}
+      @keyframes sp{50%{transform:scale(1.07)}}
+    </style>
+  </head>
+  <body>
+    <div id="splash">
+      <div class="logo"><i style="height:20px"></i><i style="height:34px"></i><i style="height:48px"></i><i style="height:34px"></i><i style="height:20px"></i></div>
+      <b>SpeakMate</b>
+    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

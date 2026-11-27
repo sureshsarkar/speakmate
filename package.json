@@ -1,0 +1,16 @@
+{
+  "name": "speakmate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SpeakMate: random audio-only English speaking practice platform (MERN + WebRTC)",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev:server": "npm --prefix server run dev",
+    "dev:server:memory": "npm --prefix server run dev:memory",
+    "dev:client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "test": "npm --prefix server test",
+    "icons": "node scripts/gen-icons.mjs"
+  }
+}
