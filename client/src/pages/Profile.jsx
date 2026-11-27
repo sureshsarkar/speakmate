@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { BadgeCheck, Clock, Crown, Flame, LogOut, Mail, PhoneCall, Settings as SettingsIcon, ShieldCheck, Star } from 'lucide-react';
 import { AvatarUploader } from '../components/AvatarUploader';
 import Avatar from '../components/Avatar';
+import InstallApp from '../components/InstallApp';
 import { PageHeader } from '../components/Shared';
 import { Badge, Button, Field, LevelBadge, Select, StatTile } from '../components/ui';
 import { GoalPicker, LevelPicker } from './Onboarding';
@@ -179,6 +180,8 @@ export default function Profile() {
           </div>
         </section>
       )}
+
+      <InstallApp />
 
       <div className="space-y-2.5">
         <Link to="/settings" className="btn-ghost w-full">

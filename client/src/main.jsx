@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { registerSW } from 'virtual:pwa-register';
 import App from './App';
 import './index.css';
+import './lib/pwa'; // starts listening for the install prompt before React mounts
 
 // Installable PWA: registers the service worker (auto-updates in the background).
 registerSW({ immediate: true });
