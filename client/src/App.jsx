@@ -1,6 +1,7 @@
 import { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter, Link, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import { CloudOff } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import AppShell from './components/AppShell';
 import { CallManager, ConnectionBanner, IncomingCallSheet, MaintenanceScreen, ToastHost } from './components/Overlays';
 import { ErrorBoundary, FullSpinner } from './components/ui';
@@ -152,6 +153,7 @@ export default function App() {
     <ErrorBoundary>
       <BrowserRouter>
         <Shell />
+        <Analytics />
       </BrowserRouter>
     </ErrorBoundary>
   );
